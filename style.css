@@ -1,0 +1,211 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 70px; /* Adjust this value to match the height of your header */
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0; /* Increased padding for larger header */
+    display: flex;
+    justify-content: space-between; /* Ensure space between elements */
+    align-items: center;
+    position: fixed; /* Make the header float */
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Ensure the header is above other content */
+}
+
+.menu-bar {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Moves the entire menu bar to the right */
+}
+
+.primary-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.primary-menu li {
+    margin-right: 20px;
+    position: relative;
+    font-size: 18px; /* Increased font size for menu items */
+}
+
+.primary-menu li a {
+    color: white; /* Set menu item text color to white */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.primary-menu li a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+.secondary-menu {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    display: none;
+}
+
+.primary-menu li:hover .secondary-menu {
+    display: block;
+}
+
+.secondary-menu li {
+    padding: 10px;
+    font-size: 16px; /* Increased font size for secondary menu items */
+}
+
+.secondary-menu li a {
+    color: white; /* Set sub-menu item text color to white */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.secondary-menu li a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+.search-container {
+    display: flex; 
+    align-items: center;
+}
+
+#search {
+    padding: 5px;
+    font-family: 'Special Elite', cursive;
+    margin-left: 5px; /* Adds space between the search input and the button */
+    margin-right: 10px; /* Additional space to the right of the search input */
+    
+}
+
+#search-button {
+    font-family: 'Special Elite', cursive; /* Apply Special Elite font to the search button */
+    padding: 5px; /* Add padding for better appearance */
+    margin-right: 20px; /* Additional space to the right of the search input */ 
+}
+
+main {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+main h1 {
+    font-size: 48px; /* Increased font size for the main section h1 */
+    font-family: 'Special Elite', cursive;  
+     
+     
+}
+
+h2 {
+    font-size: 28px; /* Increased font size for subheadings */
+    font-family: 'Special Elite', cursive;
+}
+
+.profile-pic {
+    width: auto;
+    height: 600px;
+    /*border-radius: 50%; */
+}
+
+.carousel {
+    position: relative;
+    width: 30%;
+    max-width: 500px; /* Adjust max-width as needed */
+    margin: 20px auto;
+    text-align: center; /* Center text within the carousel */
+}
+
+.carousel-image {
+    width: auto;
+    height: 400px; /* Set a fixed height */
+    object-fit: cover; /* Ensures the image covers the area while maintaining aspect ratio */
+    /*margin: 0 auto;*/
+}
+
+.carousel-content {
+    position: relative;
+}
+
+.carousel-caption {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 20px;
+    cursor: pointer;
+    z-index: 10; /* Ensure buttons are above images */
+}
+
+#prev-btn {
+    left: 5px;
+}
+
+#next-btn {
+    right: 5px;
+}
+
+footer {
+    background-color: #5e5b5b;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.social-media a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+/* Add new styles */
+.search-results {
+    padding: 20px;
+    margin: 20px;
+}
+
+.search-result {
+    margin-bottom: 20px;
+}
+
+.search-result img {
+    max-width: 100px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.search-result a {
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+}
+
+.search-result p {
+    display: inline-block;
+    margin: 0;
+    vertical-align: middle;
+}

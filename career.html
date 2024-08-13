@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career - H.O.M 'Tank' Odendaal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div id="nav-placeholder"></div>
+    </header>
+
+    <main>
+        <h1 id="main-title"></h1>
+        <div id="content-sections"></div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>Contact Us: example@example.com</p>
+            <div class="social-media">
+                <a href="https://facebook.com" target="_blank">Facebook</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Include navigation
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-placeholder').innerHTML = data;
+            });
+
+        // Load content from JSON
+        fetch('content.json')
+            .then(response => response.json())
+            .then(data => {
+                const content = data.career;
+                document.getElementById('main-title').textContent = content.title;
+
+                // Sections
+                const sectionsContainer = document.getElementById('content-sections');
+                content.sections.forEach
+    </script>
+</body>
+</html>
+

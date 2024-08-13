@@ -1,0 +1,33 @@
+{
+    "items": [
+      {
+        "type": "image",
+        "src": "images/profile.jpg",
+        "alt": "CHome Profile",
+        "tags": ["korea", "Tank Odendaal", "HOM Odendaal"],
+        "text": "Korea, 1950"
+      },
+      {
+        "type": "image",
+        "src": "images/image1.jpg",
+        "alt": "Carousel Image 1",
+        "tags": ["flight school", "1940", "HOM Odendaal"],
+        "text": "Pupil Pilot, 1940"
+      },
+      {
+        "type": "document",
+        "src": "documents/doc1.pdf",
+        "title": "Document Title 1",
+        "tags": ["report", "2023"],
+        "text": "Summary of Document 1."
+      },
+      {
+        "type": "text",
+        "src": "content.childhood",
+        "id": "early-years",
+        "content": "content.childhood",
+        "tags": ["early years"]
+      }
+    ]
+  }
+  
