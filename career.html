@@ -36,7 +36,7 @@
             });
 
         // Load content from JSON
-        fetch('content.json')
+        fetch('data/content.json') // Adjust the path if needed
             .then(response => response.json())
             .then(data => {
                 const content = data.career;
@@ -44,7 +44,13 @@
 
                 // Sections
                 const sectionsContainer = document.getElementById('content-sections');
-                content.sections.forEach
+                content.sections.forEach(section => {
+                    const sectionElement = document.createElement('section');
+                    sectionElement.id = section.id;
+                    sectionElement.innerHTML = `<h2>${section.title}</h2><p>${section.text}</p>`;
+                    sectionsContainer.appendChild(sectionElement);
+                });
+            });
     </script>
 </body>
 </html>

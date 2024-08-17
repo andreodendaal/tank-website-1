@@ -1,11 +1,13 @@
 {
   "index": {
     "title": "H.O.M 'Tank' Odendaal",
+    
     "about": {
+      
       "title": "About",
-      "tags": ["report", "2023"],
+      "tags": ["korea", "1951"],
       "text": [
-        "With tags 'report, 2023'",
+        "With tags 'report, 1940'",
         "Donec a semper eros. Vivamus blandit sem eget lorem commodo, ut posuere turpis facilisis.",
         "Integer ac odio nec lacus facilisis tempus. Morbi venenatis lectus ac nisl vehicula, at viverra nisl tempor.",
         "Nullam dignissim, odio id varius posuere, ex magna cursus ex, nec suscipit quam purus nec purus.",
@@ -13,13 +15,18 @@
         "Praesent viverra, magna sit amet interdum luctus, orci felis gravida nisi, eu vestibulum ligula odio at erat.",
         "Donec et velit nec sapien interdum vulputate. Ut vel ligula sem.",
         "Curabitur sit amet eros sed urna bibendum lacinia. Integer aliquam euismod sapien vel pharetra."
-      ]
+      ],
+      "image": "images/profile.jpg"
+      
+
     },
+
+    
     "carousel": [
       {
         "image": "images/image1.jpg",
         "alt": "Carousel Image 1",
-        "tags": ["report", "2023"],
+        "tags": ["flight school", "1940"],
         "caption": "Flight School 1940"
       },
       {
@@ -50,8 +57,9 @@
       {
         "id": "early-years",
         "title": "Early Years",
+        "tags": ["Harrismith", "childhood"],
         "text": [
-          "This is the CMS.",
+          "This is the CMS. Harrismith tag",
           "Donec a semper eros. Vivamus blandit sem eget lorem commodo, ut posuere turpis facilisis.",
           "Integer ac odio nec lacus facilisis tempus. Morbi venenatis lectus ac nisl vehicula, at viverra nisl tempor.",
           "Nullam dignissim, odio id varius posuere, ex magna cursus ex, nec suscipit quam purus nec purus.",
@@ -69,8 +77,9 @@
       {
         "id": "world-war-2",
         "title": "World War 2",
+        "tags": ["report", "1940"],
         "text": [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "tag 1940 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
           "Donec a semper eros. Vivamus blandit sem eget lorem commodo, ut posuere turpis facilisis.",
           "Integer ac odio nec lacus facilisis tempus. Morbi venenatis lectus ac nisl vehicula, at viverra nisl tempor.",
           "Nullam dignissim, odio id varius posuere, ex magna cursus ex, nec suscipit quam purus nec purus.",
@@ -83,6 +92,7 @@
       {
         "id": "korea",
         "title": "Korea",
+        "tags": ["Korea", "1951"],
         "text": [
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
           "Donec a semper eros. Vivamus blandit sem eget lorem commodo, ut posuere turpis facilisis.",
@@ -93,7 +103,10 @@
           "Donec et velit nec sapien interdum vulputate. Ut vel ligula sem.",
           "Curabitur sit amet eros sed urna bibendum lacinia. Integer aliquam euismod sapien vel pharetra."
         ]
+        
       },
+
+  
       {
         "id": "post-war",
         "title": "Post War",
@@ -116,8 +129,9 @@
       {
         "id": "family",
         "title": "Family",
+        "tags": ["family", "golf"],
         "text": [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "Tag - family, golf - Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
           "Donec a semper eros. Vivamus blandit sem eget lorem commodo, ut posuere turpis facilisis.",
           "Integer ac odio nec lacus facilisis tempus. Morbi venenatis lectus ac nisl vehicula, at viverra nisl tempor.",
           "Nullam dignissim, odio id varius posuere, ex magna cursus ex, nec suscipit quam purus nec purus.",
@@ -130,8 +144,9 @@
       {
         "id": "dogs",
         "title": "Dogs",
+        "tags": ["dogs"],
         "text": [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "Tag - dogs, Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
           "Donec a semper eros. Vivamus blandit sem eget lorem commodo, ut posuere turpis facilisis.",
           "Integer ac odio nec lacus facilisis tempus. Morbi venenatis lectus ac nisl vehicula, at viverra nisl tempor.",
           "Nullam dignissim, odio id varius posuere, ex magna cursus ex, nec suscipit quam purus nec purus.",
