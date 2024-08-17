@@ -1,13 +1,13 @@
 // Navigation and Search Management Class
 class Nav {
-    constructor(navPlaceholderId, navUrl, contentUrl) {
+    constructor(navPlaceholderId, navUrl, catalogUrl) {
         this.navPlaceholderId = navPlaceholderId;
         this.navUrl = navUrl;
-        this.contentUrl = contentUrl;
-        this.content = {};
-        this.contentLoaded = false;
+        this.catalogUrl = catalogUrl;
+        this.catalog = [];
+        this.catalogLoaded = false;
         this.loadNav();
-        this.loadContent();
+        this.loadCatalog();
     }
 
     async loadNav() {
@@ -21,14 +21,14 @@ class Nav {
         }
     }
 
-    async loadContent() {
+    async loadCatalog() {
         try {
-            const response = await fetch(this.contentUrl);
+            const response = await fetch(this.catalogUrl);
             const data = await response.json();
-            this.content = data;
-            this.contentLoaded = true;
+            this.catalog = data.items;
+            this.catalogLoaded = true;
         } catch (error) {
-            console.error('Error loading content:', error);
+            console.error('Error loading catalog:', error);
         }
     }
 
@@ -40,48 +40,34 @@ class Nav {
     }
 
     search(query) {
-        if (!this.contentLoaded) {
-            console.error('Content not loaded yet.');
+        if (!this.catalogLoaded) {
+            console.error('Catalog not loaded yet.');
             return [];
         }
 
         query = query.toLowerCase();
-        let results = [];
-
-        const searchInSection = (section) => {
-            if (section.tags && section.tags.some(tag => tag.toLowerCase().includes(query))) {
-                results.push(section);
-            }
-            if (section.sections) {
-                section.sections.forEach(subSection => searchInSection(subSection));
-            }
-            if (section.carousel) {
-                section.carousel.forEach(carouselItem => {
-                    if (carouselItem.tags && carouselItem.tags.some(tag => tag.toLowerCase().includes(query))) {
-                        results.push(carouselItem);
-                    }
-                });
-            }
-        };
-
-        Object.values(this.content).forEach(section => searchInSection(section));
-
-        return results;
+        return this.catalog.filter(item =>
+            item.tags.some(tag => tag.toLowerCase().includes(query))
+        );
     }
 
     generateResultsHTML(results) {
         let resultsHTML = '';
         if (results.length > 0) {
             results.forEach(result => {
-                if (result.image) {
+                if (result.type === 'image') {
                     resultsHTML += `<div class="search-result">
-                        <img src="${result.image}" alt="${result.alt}">
-                        <p>${result.caption}</p>
+                        <img src="${result.src}" alt="${result.alt}">
+                        <p>${result.text}</p>
                     </div>`;
-                } else if (result.text) {
+                } else if (result.type === 'document') {
                     resultsHTML += `<div class="search-result">
-                        <h3>${result.title}</h3>
-                        <p>${result.text.join(' ')}</p>
+                        <a href="${result.src}" target="_blank">${result.title}</a>
+                        <p>${result.text}</p>
+                    </div>`;
+                } else if (result.type === 'text') {
+                    resultsHTML += `<div class="search-result">
+                        <p>${result.content}</p>
                     </div>`;
                 }
             });
@@ -108,5 +94,5 @@ class Nav {
 
 // Initialize site when DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
-    new Nav('nav-placeholder', 'nav.html', 'data/content.json');
+    new Nav('nav-placeholder', 'nav.html', 'data/catalog.json');
 });
